@@ -1,0 +1,4 @@
+/opt/android/dalvik-sdk/rt/lib/ext/compat-1.0.0.jar
+/opt/android/dalvik-sdk/rt/lib/ext/jfxrt.jar
+/opt/android/dalvik-sdk/rt/lib/ext/jfxdvk.jar
+/home/william/projetos/stacker_game_android/build/intermediates/classes/debug

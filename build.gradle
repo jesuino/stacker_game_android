@@ -1,0 +1,45 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'me.tatarka:gradle-retrolambda:2.4.1'
+        classpath 'com.android.tools.build:gradle:0.14.1'
+    }
+}
+repositories {
+    jcenter()
+}
+ext {
+    dalvikSdkHome = '/opt/android/dalvik-sdk' // just in case you need this value too
+    dalvikSkLib = dalvikSdkHome + '/rt/lib'
+}
+
+apply plugin: 'android'
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.1"
+    dexOptions {
+        preDexLibraries = false
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDir file("${dalvikSkLib}/")
+            assets.srcDirs = ['assets']
+        }
+    }
+      lintOptions {
+          abortOnError false
+      }
+
+}
+
+dependencies {
+    compile files ("${dalvikSkLib}/ext/jfxrt.jar",
+                   "${dalvikSkLib}/ext/jfxdvk.jar",
+                   "${dalvikSkLib}/ext/compat-1.0.0.jar")
+}
+
+project.tasks.withType(com.android.build.gradle.tasks.Dex) {
+    additionalParameters=['--core-library']
+}

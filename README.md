@@ -1,2 +1,5 @@
-# stacker_game_android
-Porting the Stacker Game to Android
+# Stacker Game Android
+
+Porting the Stacker Game to Android.
+
+For more information see fxapps.blogspot.com

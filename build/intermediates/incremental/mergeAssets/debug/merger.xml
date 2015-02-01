@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/home/william/projetos/stacker_game_android/assets"><file name="javafx.platform.properties" path="/home/william/projetos/stacker_game_android/assets/javafx.platform.properties"/><file name="javafx.properties" path="/home/william/projetos/stacker_game_android/assets/javafx.properties"/></source></dataSet><dataSet config="debug"><source path="/home/william/projetos/stacker_game_android/src/debug/assets"/></dataSet></merger>
